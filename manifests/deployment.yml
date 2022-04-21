@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: aboladepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aboladepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: aboladepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: aboladepipelinesjavascriptdocker 
+          image: myappcr20220421.azurecr.io/aboladepipelinesjavascriptdocker
+          ports:
+          - containerPort: 80
