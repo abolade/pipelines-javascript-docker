@@ -5,6 +5,10 @@ metadata:
 spec:
     type: LoadBalancer
     ports:
-    - port: 80 
+    - name: old
+      port: 80 
+    - name: new
+      port: 3000
+      nodePort: 8081
     selector:
         app: aboladepipelinesjavascriptdocker
